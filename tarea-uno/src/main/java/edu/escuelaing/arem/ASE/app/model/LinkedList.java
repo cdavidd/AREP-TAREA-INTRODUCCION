@@ -1,4 +1,4 @@
-package edu.escuelaing.arem.ASE.app.clases;
+package edu.escuelaing.arem.ASE.app.model;
 
 import java.util.Collection;
 import java.util.Iterator;
@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.ListIterator;
 
 class LinkedList<E> implements List<E> {
-    private int size=0;
+    private int size = 0;
     private Node<E> head = new Node<E>();
     private Node<E> actual = null;
 
@@ -23,7 +23,7 @@ class LinkedList<E> implements List<E> {
     }
 
     public Iterator<E> iterator() {
-        return new ListIterator<E>(head.getPrior());
+        return new ListIteratorPersonal<E>(head.getPrior());
     }
 
     public Object[] toArray() {
@@ -36,11 +36,11 @@ class LinkedList<E> implements List<E> {
 
     public boolean add(E e) {
         Node<E> nuevo = new Node<E>(e);
-        if (size==0){
+        if (size == 0) {
             head.setPrior(nuevo);
             head.setNext(nuevo);
             this.actual = nuevo;
-        }else{
+        } else {
             head.getNext().setNext(nuevo);
             head.setNext(nuevo);
         }
@@ -111,5 +111,5 @@ class LinkedList<E> implements List<E> {
     public List<E> subList(int fromIndex, int toIndex) {
         return null;
     }
-    
+
 }

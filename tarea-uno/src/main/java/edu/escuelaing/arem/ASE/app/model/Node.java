@@ -1,12 +1,14 @@
-package edu.escuelaing.arem.ASE.app.clases;
+package edu.escuelaing.arem.ASE.app.model;
 
-class Node<E>{
+class Node<E> {
     private E data;
-    private Node<E> next= null;
-    private Node<E> prior= null;
-    public Node (){
+    private Node<E> next = null;
+    private Node<E> prior = null;
+
+    public Node() {
     }
-    public Node (E dato){
+
+    public Node(E dato) {
         this.data = dato;
     }
 
@@ -33,7 +35,5 @@ class Node<E>{
     public void setPrior(Node<E> prior) {
         this.prior = prior;
     }
-
-    
 
 }
