@@ -5,10 +5,10 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 
-class LinkedList<E> implements List<E> {
+public class LinkedList<E> implements List<E> {
     private int size = 0;
     private Node<E> head = new Node<E>();
-    private Node<E> actual = null;
+    // private Node<E> actual = null;
 
     public int size() {
         return size;
@@ -39,7 +39,7 @@ class LinkedList<E> implements List<E> {
         if (size == 0) {
             head.setPrior(nuevo);
             head.setNext(nuevo);
-            this.actual = nuevo;
+            // this.actual = nuevo;
         } else {
             head.getNext().setNext(nuevo);
             head.setNext(nuevo);
@@ -77,7 +77,17 @@ class LinkedList<E> implements List<E> {
     }
 
     public E get(int index) {
-        return null;
+        if (index < 0 || index < size) {
+            int pos = 0;
+            Iterator<E> iterador = iterator();
+            while (pos != index) {
+                iterador.next();
+                pos++;
+            }
+            return iterador.next();
+        } else {
+            throw new IndexOutOfBoundsException();
+        }
     }
 
     public E set(int index, E element) {
