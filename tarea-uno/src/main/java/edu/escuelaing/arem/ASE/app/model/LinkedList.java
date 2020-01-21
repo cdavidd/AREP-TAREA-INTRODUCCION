@@ -10,6 +10,9 @@ public class LinkedList<E> implements List<E> {
     private Node<E> head = new Node<E>();
     // private Node<E> actual = null;
 
+    /**
+     *
+     */
     public int size() {
         return size;
     }
@@ -22,6 +25,9 @@ public class LinkedList<E> implements List<E> {
         return false;
     }
 
+    /**
+     *
+     */
     public Iterator<E> iterator() {
         return new ListIteratorPersonal<E>(head.getPrior());
     }
@@ -34,6 +40,9 @@ public class LinkedList<E> implements List<E> {
         return null;
     }
 
+    /**
+     *
+     */
     public boolean add(E e) {
         Node<E> nuevo = new Node<E>(e);
         if (size == 0) {
@@ -76,6 +85,9 @@ public class LinkedList<E> implements List<E> {
 
     }
 
+    /**
+     *
+     */
     public E get(int index) {
         if (index < 0 || index < size) {
             int pos = 0;
