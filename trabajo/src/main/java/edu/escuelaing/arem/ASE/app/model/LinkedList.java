@@ -26,7 +26,9 @@ public class LinkedList<E> implements List<E> {
     }
 
     /**
-     *
+     * Iterador para moverse entre los elementes de la linkedList
+     * 
+     * @return ListIteratorPersonal
      */
     public Iterator<E> iterator() {
         return new ListIteratorPersonal<E>(head.getPrior());
@@ -41,7 +43,10 @@ public class LinkedList<E> implements List<E> {
     }
 
     /**
-     *
+     * Añade a la linkedList el dato ingresado
+     * 
+     * @param e dato a agregar en la LinkedList
+     * @return boolean
      */
     public boolean add(E e) {
         Node<E> nuevo = new Node<E>(e);
@@ -86,7 +91,10 @@ public class LinkedList<E> implements List<E> {
     }
 
     /**
-     *
+     * Retorna el elemento del indice especificado
+     * 
+     * @param int indece del elemento
+     * @return dato del nodo
      */
     public E get(int index) {
         if (index < 0 || index < size) {

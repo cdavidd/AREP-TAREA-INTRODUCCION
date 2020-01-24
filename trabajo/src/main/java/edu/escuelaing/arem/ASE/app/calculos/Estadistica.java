@@ -2,12 +2,13 @@ package edu.escuelaing.arem.ASE.app.calculos;
 
 import java.util.List;
 
-public class Estadistica{
-       
-    
+public class Estadistica {
+
     /**
+     * Metodo que calcula la media de los datos ingresados
+     * 
      * @param datos
-     * @return
+     * @return double
      */
     public static double mean(List<Double> datos) {
         double cont = 0;
@@ -19,8 +20,10 @@ public class Estadistica{
     }
 
     /**
+     * Metodo que calcula la desviacion estandar de los datos ingresados
+     * 
      * @param datos
-     * @return
+     * @return double
      */
     public static double stdDev(List<Double> datos) {
         int size = datos.size();
