@@ -35,7 +35,7 @@ Podremos copiar la URL y desde consola ejecutar el siguiente comando `git clone 
 
 **Ejecución**
 
-Para la ejecución del programa entraremos en la carpeta descargada o clonada _AREP-TAREA-INTRODUCCION/trabajo_, ya en esta ubicación desde consola ejecutaremos el siguiente comando: `mvn exec:java -Dexec.args="<archivo.txt>"`
+Para la ejecución del programa entraremos en la carpeta descargada o clonada _AREP-TAREA-INTRODUCCION/trabajo_, ya en esta ubicación desde consola ejecutaremos el siguiente comando `mvn package` en el cual sera para compilar y al final saldra un error ya que espera un archivo como entrada, para ejecutar con archivo utilizaremos el siguiente comando `mvn exec:java -Dexec.args="<archivo.txt>"`
 ![Imágen 1](img/ejecucion.JPG)
 
 ## Ejecutando las pruebas
