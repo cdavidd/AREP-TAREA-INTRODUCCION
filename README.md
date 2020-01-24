@@ -67,6 +67,11 @@ Para ejecutar la pruebas se realizara mediante el siguiente comando `mvn test`
 	}
 ```
 
+## Generar javaDocs
+
+Para generar el javaDocs utilizaremos `mvn javadoc:javadoc`
+
+
 ## Autores
 
 - Cristian López
